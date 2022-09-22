@@ -11,7 +11,7 @@ let query= promisify(db)
 
 
 //laith aladsdasdds
-
+//todo fuck server
 app.set("view-engine", "ejs");
 app.use(express.urlencoded({extended: false }))
 
