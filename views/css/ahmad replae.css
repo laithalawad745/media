@@ -1,0 +1,235 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+:root {
+  --main-color: #0500ff;
+  --main-color-alt: #1787e0;
+  --main-transition: 0.5s;
+  --main-boxshado: 1px 1px 12px 5px red;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* start pag 1 */
+.up-header {
+  background-color: black;
+  color: var(--main-color);
+  padding: 8px;
+  font-size: 18px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: calc(100vh - 36.7px);
+  position: relative;
+}
+@media (max-width: 767px) {
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.header .left-pag {
+  background-color: black;
+  color: var(--main-color);
+  position: relative;
+}
+@media (max-width: 767px) {
+  .header .left-pag {
+    width: 100%;
+  }
+}
+.header .left-pag .kto {
+  position: absolute;
+  top: 40px;
+  font-size: 50px;
+  left: 20px;
+}
+
+.header .left-pag .kto:hover + .lists {
+  display: flex;
+  flex-direction: column;
+  top: 38%;
+  position: absolute;
+  left: -12px;
+  width: 96%;
+  z-index: 25;
+  background-color: #000000ed;
+  border-top: 5px solid var(--main-color);
+  margin-top: 35px;
+}
+
+@media (min-width: 767px) {
+  .header .left-pag .kto {
+    display: none;
+  }
+}
+
+.header .left-pag .imge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.header .left-pag .imge img {
+  margin-left: 10px;
+  width: 50px;
+}
+
+@media (max-width: 767px) {
+  .header .left-pag .imge img {
+    display: none;
+  }
+}
+
+.header .left-pag .imge h3 {
+  margin: 0;
+  font-size: 50px;
+  margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+  .header .left-pag .imge h3 {
+    padding-left: 60%;
+  }
+}
+
+.header .left-pag .user {
+  margin: 50px auto 30px;
+}
+
+.header .left-pag p {
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.header .left-pag .lists {
+  padding-left: 0px;
+  margin: 10px;
+}
+
+@media (max-width: 767px) {
+  .header .left-pag .lists {
+    display: none;
+  }
+}
+
+.header .left-pag .lists li {
+  background-color: var(--main-color);
+  padding: 18px;
+  margin: 20px;
+  border-radius: 50px;
+}
+
+.header .left-pag .lists li a {
+  color: black;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 10px;
+  transition: var(--main-transition);
+}
+
+.header .left-pag .lists li:hover a {
+  padding-left: 40px;
+}
+
+.header .right-pag {
+  background-color: var(--main-color);
+  position: relative;
+}
+@media (max-width: 767px) {
+  .header .right-pag {
+    width: 100%;
+  }
+}
+.header .right-pag h2 {
+  font-size: 35px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.header .right-pag .applications {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-left: 20px;
+}
+
+@media (max-width: 991px) {
+  .header .right-pag .applications {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  .header .right-pag .applications {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+.header .right-pag .applications .app {
+  background-color: black;
+  margin: 20px;
+  width: 180px;
+  height: 180px;
+  border-radius: 30px;
+  position: relative;
+  transition: var(--main-transition);
+}
+@media (max-width: 991px) {
+  .header .right-pag .applications .app {
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.header .right-pag .applications .app:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--main-boxshado);
+}
+.header .right-pag .applications .app a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header .right-pag .applications .app a i {
+  font-size: 100px;
+  color: var(--main-color);
+}
+
+.header .right-pag .support {
+  background-color: white;
+  padding: 20px;
+  font-size: 40px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  color: black;
+  transition: var(--main-transition);
+}
+.header .right-pag .support:hover {
+  transform: scale(1.2);
+  box-shadow: var(--main-boxshado);
+}
+
+/* end pag 1 */
